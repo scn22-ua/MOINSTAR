@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b1jfdefs0ibmh" path="res://kenney_scribble-platformer/Construct/slime.png" id="1_jcnva"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jcnva"]
-radius = 9.0
+radius = 8.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=486339129]
 
@@ -14,4 +14,5 @@ scale = Vector2(0.04651653, 0.03833008)
 texture = ExtResource("1_jcnva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1433739344]
+position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_jcnva")

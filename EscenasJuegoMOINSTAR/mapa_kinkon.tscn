@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://n3box74l5sdm"]
+
+[ext_resource type="Texture2D" uid="uid://bvssy0vc5scoj" path="res://kenney_scribble-platformer/Construct/Firefly_Gemini_Flash_quita_las_piedras_del_frente_y_las_lineas_azules_que_pasan_por_el_fondo_901798.png" id="1_lrn3l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mutyu"]
+size = Vector2(255.5, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tis0"]
+size = Vector2(638, 34.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3rkuv"]
+size = Vector2(836.83295, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8c8cc"]
+size = Vector2(824.6798, 35.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_luh2w"]
+size = Vector2(273.01184, 37.90982)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slo6e"]
+size = Vector2(558.5, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrn3l"]
+size = Vector2(827.5, 32.297935)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4bnd"]
+size = Vector2(832, 29.855375)
+
+[node name="mapaKinkon" type="StaticBody2D" unique_id=412527600]
+
+[node name="FireflyGeminiFlashQuitaLasPiedrasDelFrenteYLasLineasAzulesQuePasanPorElFondo901798" type="Sprite2D" parent="." unique_id=630293888]
+position = Vector2(516, 111)
+texture = ExtResource("1_lrn3l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1669332755]
+position = Vector2(204.25, 617.5)
+shape = SubResource("RectangleShape2D_mutyu")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=588228498]
+position = Vector2(653, 592.00006)
+rotation = -0.08726646
+shape = SubResource("RectangleShape2D_0tis0")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1311270678]
+position = Vector2(488.00003, 447.00006)
+rotation = 0.08028515
+shape = SubResource("RectangleShape2D_3rkuv")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=68187215]
+position = Vector2(550.00006, 296.99997)
+rotation = -0.08028515
+shape = SubResource("RectangleShape2D_8c8cc")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="." unique_id=820598842]
+position = Vector2(755.00006, -121.00001)
+rotation = 0.08028515
+shape = SubResource("RectangleShape2D_luh2w")
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="." unique_id=284488457]
+position = Vector2(351.00003, -139)
+rotation = 0.017453292
+shape = SubResource("RectangleShape2D_slo6e")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=827377957]
+position = Vector2(483.87827, 152.5132)
+rotation = 0.08028515
+shape = SubResource("RectangleShape2D_lrn3l")
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="." unique_id=2137963606]
+position = Vector2(546.3952, 0.91181517)
+rotation = -0.08028515
+shape = SubResource("RectangleShape2D_d4bnd")
+one_way_collision = true

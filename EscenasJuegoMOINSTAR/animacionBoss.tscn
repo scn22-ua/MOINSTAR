@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://co7c6nkljumps"]
 
+[ext_resource type="Script" uid="uid://rqb3t0pmugt" path="res://EscenasJuegoMOINSTAR/boss.gd" id="1_2hxi1"]
 [ext_resource type="Texture2D" uid="uid://djkchg8qljbet" path="res://kenney_scribble-platformer/PNG/Default/character_squareRed.png" id="1_wfr2k"]
 [ext_resource type="Texture2D" uid="uid://c6ebvqxwilfer" path="res://kenney_scribble-platformer/PNG/Default/character_handRed.png" id="2_2hxi1"]
 [ext_resource type="Texture2D" uid="uid://bdyjii0lknvc0" path="res://kenney_scribble-platformer/PNG/tile_bush.png" id="3_t2h6b"]
@@ -68,7 +69,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.14943679, 0.23333333, 0.3392619, 0.39580554, 0.6179413, 0.81584406, 1.0012579),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-8, 11), Vector2(38.50946, 2), Vector2(40.741238, -1.8297882), Vector2(55.9917, -28), Vector2(0, -43), Vector2(55.112156, -22), Vector2(64.90545, 4), Vector2(-8, 11)]
+"values": [Vector2(-42, -19), Vector2(38.50946, 2), Vector2(40.741238, -1.8297882), Vector2(55.9917, -28), Vector2(0, -43), Vector2(55.112156, -22), Vector2(64.90545, 4), Vector2(-8, 11)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -81,6 +82,20 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"launch_barrel"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_r2xbs"]
@@ -118,7 +133,8 @@ _data = {
 &"reposo": SubResource("Animation_r2xbs")
 }
 
-[node name="Node2D" type="Node2D" unique_id=1369230002]
+[node name="Boss" type="Node2D" unique_id=1369230002]
+script = ExtResource("1_2hxi1")
 
 [node name="CharacterSquareRed" type="Sprite2D" parent="." unique_id=1061433239]
 texture = ExtResource("1_wfr2k")
@@ -133,7 +149,8 @@ position = Vector2(29, 12)
 scale = Vector2(0.53125, 0.515625)
 texture = ExtResource("3_t2h6b")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=362119443]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterSquareRed/CharacterHandRed" unique_id=362119443]
+root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_ihge8")
 autoplay = &"reposo"
 
@@ -151,3 +168,9 @@ texture = ExtResource("3_t2h6b")
 position = Vector2(-115, 13)
 scale = Vector2(0.546875, 0.484375)
 texture = ExtResource("3_t2h6b")
+
+[node name="Timer" type="Timer" parent="." unique_id=1889375339]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

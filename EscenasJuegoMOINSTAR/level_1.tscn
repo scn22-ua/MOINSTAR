@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cowgkdmmggowj" path="res://EscenasJuegoMOINSTAR/personaje.tscn" id="3_sobrr"]
 [ext_resource type="PackedScene" uid="uid://c1jjmku441cly" path="res://EscenasJuegoMOINSTAR/barril.tscn" id="4_pmndo"]
 [ext_resource type="Script" uid="uid://dqfglehtjxb08" path="res://EscenasJuegoMOINSTAR/personaje.gd" id="5_pmndo"]
-[ext_resource type="Script" uid="uid://dts74lu24iv20" path="res://EscenasJuegoMOINSTAR/cameraFollow.gd" id="5_sobrr"]
+[ext_resource type="Script" uid="uid://b1kvym66pbc13" path="res://EscenasJuegoMOINSTAR/camera_2d.gd" id="5_sobrr"]
 
 [node name="level1" type="Node2D" unique_id=659046909]
 
@@ -30,12 +30,11 @@ position = Vector2(195, 441)
 position = Vector2(313, 150)
 
 [node name="CharacterBody2D" parent="." unique_id=1785023968 instance=ExtResource("3_sobrr")]
-position = Vector2(186, 156)
+position = Vector2(490, 382)
 script = ExtResource("5_pmndo")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1321712097]
-position = Vector2(-187, 4)
-offset = Vector2(30, 30)
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1686451878]
+zoom = Vector2(3, 3)
 script = ExtResource("5_sobrr")
 
 [node name="RigidBody2D" parent="." unique_id=1071756709 instance=ExtResource("4_pmndo")]

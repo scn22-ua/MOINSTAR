@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	position = object_to_follow.position
 
 func _physics_process(delta: float) -> void:
 	pass
