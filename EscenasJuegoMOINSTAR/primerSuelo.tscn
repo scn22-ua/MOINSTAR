@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://driv0r7x1lkb1"]
+
+[ext_resource type="Texture2D" uid="uid://bwpi20wg0gkf" path="res://kenney_scribble-platformer/PNG/Firefly_GeminiFlash_generame la imagen de un suelo visto de lado 2d para un juego, que sea un diseño llam 341346.png" id="1_esj5u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mu0ub"]
+size = Vector2(238, 46)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=564937968]
+
+[node name="FireflyGeminiFlashGenerameLaImagenDeUnSueloVistoDeLado2dParaUnJuego,QueSeaUnDiseñoLlam341346" type="Sprite2D" parent="." unique_id=1829060057]
+position = Vector2(0.99999905, 22)
+scale = Vector2(0.28304034, 0.20459644)
+texture = ExtResource("1_esj5u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1073472815]
+position = Vector2(1, 23)
+shape = SubResource("RectangleShape2D_mu0ub")

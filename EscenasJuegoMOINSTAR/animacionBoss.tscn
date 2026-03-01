@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://co7c6nkljumps"]
+
+[ext_resource type="Texture2D" uid="uid://djkchg8qljbet" path="res://kenney_scribble-platformer/PNG/Default/character_squareRed.png" id="1_wfr2k"]
+[ext_resource type="Texture2D" uid="uid://c6ebvqxwilfer" path="res://kenney_scribble-platformer/PNG/Default/character_handRed.png" id="2_2hxi1"]
+[ext_resource type="Texture2D" uid="uid://bdyjii0lknvc0" path="res://kenney_scribble-platformer/PNG/tile_bush.png" id="3_t2h6b"]
+
+[sub_resource type="Animation" id="Animation_w4doo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterSquareRed/CharacterHandRed:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6, 7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterSquareRed/CharacterHandRed/TileBush:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterSquareRed:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sejot"]
+resource_name = "lanzar_barril"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterSquareRed:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterSquareRed/CharacterHandRed:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.14943679, 0.23333333, 0.3392619, 0.39580554, 0.6179413, 0.81584406, 1.0012579),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-8, 11), Vector2(38.50946, 2), Vector2(40.741238, -1.8297882), Vector2(55.9917, -28), Vector2(0, -43), Vector2(55.112156, -22), Vector2(64.90545, 4), Vector2(-8, 11)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterSquareRed/CharacterHandRed/TileBush:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.8333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_r2xbs"]
+resource_name = "reposo"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterSquareRed/CharacterHandRed:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.39, 0.68),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-8, 11), Vector2(-6, 16), Vector2(7, 21)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterSquareRed/CharacterHandRed/TileBush:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.14966989),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ihge8"]
+_data = {
+&"RESET": SubResource("Animation_w4doo"),
+&"lanzar_barril": SubResource("Animation_sejot"),
+&"reposo": SubResource("Animation_r2xbs")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1369230002]
+
+[node name="CharacterSquareRed" type="Sprite2D" parent="." unique_id=1061433239]
+texture = ExtResource("1_wfr2k")
+
+[node name="CharacterHandRed" type="Sprite2D" parent="CharacterSquareRed" unique_id=341715169]
+position = Vector2(-6, 7)
+texture = ExtResource("2_2hxi1")
+
+[node name="TileBush" type="Sprite2D" parent="CharacterSquareRed/CharacterHandRed" unique_id=783851296]
+visible = false
+position = Vector2(29, 12)
+scale = Vector2(0.53125, 0.515625)
+texture = ExtResource("3_t2h6b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=362119443]
+libraries/ = SubResource("AnimationLibrary_ihge8")
+autoplay = &"reposo"
+
+[node name="TileBush" type="Sprite2D" parent="." unique_id=182560206]
+position = Vector2(-77, 15.000001)
+scale = Vector2(0.5078125, 0.4765625)
+texture = ExtResource("3_t2h6b")
+
+[node name="TileBush2" type="Sprite2D" parent="." unique_id=972569101]
+position = Vector2(-95, -11)
+scale = Vector2(0.46874994, 0.5)
+texture = ExtResource("3_t2h6b")
+
+[node name="TileBush3" type="Sprite2D" parent="." unique_id=1885490766]
+position = Vector2(-115, 13)
+scale = Vector2(0.546875, 0.484375)
+texture = ExtResource("3_t2h6b")

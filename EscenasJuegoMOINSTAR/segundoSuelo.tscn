@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dsj6uqmn5i2su"]
+
+[ext_resource type="Texture2D" uid="uid://dwv8ix1nan401" path="res://kenney_scribble-platformer/PNG/Firefly_GeminiFlash_ahora generame islas(plataformas), de diseño simple vistas desde el lateral, con la m 341346.png" id="1_6163j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jewu4"]
+size = Vector2(77, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3blo"]
+size = Vector2(115, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1f0qy"]
+size = Vector2(128, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evbsm"]
+size = Vector2(79, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8gcd"]
+size = Vector2(95, 25)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=564937968]
+
+[node name="FireflyGeminiFlashAhoraGenerameIslas(plataformas),DeDiseñoSimpleVistasDesdeElLateral,ConLaM341346" type="Sprite2D" parent="." unique_id=443626436]
+scale = Vector2(0.30912164, 0.20775463)
+texture = ExtResource("1_6163j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=276869519]
+position = Vector2(-15.5, 31)
+shape = SubResource("RectangleShape2D_jewu4")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=372148262]
+position = Vector2(102.5, 16.5)
+shape = SubResource("RectangleShape2D_y3blo")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=640923625]
+position = Vector2(-15, -25.5)
+shape = SubResource("RectangleShape2D_1f0qy")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=415567748]
+position = Vector2(-134.5, -3.5)
+shape = SubResource("RectangleShape2D_evbsm")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=1000176096]
+position = Vector2(-125.5, 47.5)
+shape = SubResource("RectangleShape2D_w8gcd")
+one_way_collision = true

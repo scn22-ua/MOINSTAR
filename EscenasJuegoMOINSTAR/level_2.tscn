@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://den6wdc7xr18r"]
+
+[ext_resource type="PackedScene" uid="uid://bu8a1siqvl6uh" path="res://EscenasJuegoMOINSTAR/level_1.tscn" id="1_ekpsq"]
+[ext_resource type="PackedScene" uid="uid://dsj6uqmn5i2su" path="res://EscenasJuegoMOINSTAR/segundoSuelo.tscn" id="2_sc3ks"]
+[ext_resource type="PackedScene" uid="uid://kr4jonlbte4r" path="res://EscenasJuegoMOINSTAR/slime.tscn" id="3_8utth"]
+
+[node name="level1" unique_id=659046909 instance=ExtResource("1_ekpsq")]
+
+[node name="CapturaDePantalla20260228221159" parent="." index="0" unique_id=76393187]
+position = Vector2(406, 379)
+
+[node name="StaticBody2D" parent="." index="2" unique_id=200239532]
+position = Vector2(244.00003, 301)
+
+[node name="StaticBody2D5" parent="." index="5" unique_id=793012747]
+position = Vector2(177, 468)
+
+[node name="StaticBody2D7" parent="." index="6" unique_id=564937968 instance=ExtResource("2_sc3ks")]
+position = Vector2(832, 436)
+
+[node name="StaticBody2D8" parent="." index="7" unique_id=2144198323 instance=ExtResource("2_sc3ks")]
+position = Vector2(1206, 402)
+
+[node name="Camera2D" parent="CharacterBody2D" parent_id_path=PackedInt32Array(1785023968) index="2" unique_id=1321712097]
+limit_left = 100
+limit_top = 100
+limit_right = 100
+limit_bottom = 100
+
+[node name="RigidBody2D2" parent="." index="11" unique_id=1799092921]
+position = Vector2(667, 246)
+
+[node name="RigidBody2D3" parent="." index="12" unique_id=1256688966]
+position = Vector2(594, 317)
+
+[node name="CharacterBody2D2" parent="." index="14" unique_id=486339129 instance=ExtResource("3_8utth")]
+position = Vector2(579, 400)

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bu8a1siqvl6uh"]
+
+[ext_resource type="PackedScene" uid="uid://driv0r7x1lkb1" path="res://EscenasJuegoMOINSTAR/primerSuelo.tscn" id="1_h5nvm"]
+[ext_resource type="PackedScene" uid="uid://dsj6uqmn5i2su" path="res://EscenasJuegoMOINSTAR/segundoSuelo.tscn" id="2_7dxe5"]
+[ext_resource type="PackedScene" uid="uid://cowgkdmmggowj" path="res://EscenasJuegoMOINSTAR/personaje.tscn" id="3_sobrr"]
+[ext_resource type="PackedScene" uid="uid://c1jjmku441cly" path="res://EscenasJuegoMOINSTAR/barril.tscn" id="4_pmndo"]
+[ext_resource type="Script" uid="uid://dqfglehtjxb08" path="res://EscenasJuegoMOINSTAR/personaje.gd" id="5_pmndo"]
+[ext_resource type="Script" uid="uid://dts74lu24iv20" path="res://EscenasJuegoMOINSTAR/cameraFollow.gd" id="5_sobrr"]
+
+[node name="level1" type="Node2D" unique_id=659046909]
+
+[node name="StaticBody2D2" parent="." unique_id=564937968 instance=ExtResource("1_h5nvm")]
+position = Vector2(500, 410)
+
+[node name="StaticBody2D" parent="." unique_id=200239532 instance=ExtResource("2_7dxe5")]
+position = Vector2(266.00003, 289.00003)
+rotation = 0.08726646
+
+[node name="StaticBody2D3" parent="." unique_id=2115064626 instance=ExtResource("2_7dxe5")]
+position = Vector2(706, 291)
+
+[node name="StaticBody2D4" parent="." unique_id=784096775 instance=ExtResource("2_7dxe5")]
+position = Vector2(691, 148)
+rotation = -0.12217305
+
+[node name="StaticBody2D5" parent="." unique_id=793012747 instance=ExtResource("2_7dxe5")]
+position = Vector2(195, 441)
+
+[node name="StaticBody2D6" parent="." unique_id=1654870250 instance=ExtResource("2_7dxe5")]
+position = Vector2(313, 150)
+
+[node name="CharacterBody2D" parent="." unique_id=1785023968 instance=ExtResource("3_sobrr")]
+position = Vector2(186, 156)
+script = ExtResource("5_pmndo")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1321712097]
+position = Vector2(-187, 4)
+offset = Vector2(30, 30)
+script = ExtResource("5_sobrr")
+
+[node name="RigidBody2D" parent="." unique_id=1071756709 instance=ExtResource("4_pmndo")]
+position = Vector2(157, 94)
+
+[node name="RigidBody2D2" parent="." unique_id=1799092921 instance=ExtResource("4_pmndo")]
+position = Vector2(262, 241)
+
+[node name="RigidBody2D3" parent="." unique_id=1256688966 instance=ExtResource("4_pmndo")]
+position = Vector2(429, 144)
+
+[node name="RigidBody2D4" parent="." unique_id=1194197498 instance=ExtResource("4_pmndo")]
+position = Vector2(668, 95)
